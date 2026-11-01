@@ -1,0 +1,71 @@
+{
+  "name": "dsh-pdf-atelier",
+  "version": "0.1.0",
+  "description": "PDF atelier for DeepSeek Harness: turn Markdown into a beautifully art-directed PDF whose palette, typography, cover art and page layout follow the document's subject, with font-free LaTeX, geometry and function figures, charts and image conversion built in.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib/",
+    "assets/",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "pdf",
+    "design",
+    "typography",
+    "latex",
+    "report"
+  ],
+  "license": "MIT",
+  "author": "Jiasheng Fu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixJiashengFu/dsh-pdf-atelier.git"
+  },
+  "homepage": "https://github.com/FelixJiashengFu/dsh-pdf-atelier#readme",
+  "bugs": {
+    "url": "https://github.com/FelixJiashengFu/dsh-pdf-atelier/issues"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "fonts": "node scripts/vendor-fonts.mjs",
+    "samples": "node scripts/samples.mjs"
+  },
+  "dependencies": {
+    "@jaxzhou/dsh-mathmatic-symbol": "^0.1.2",
+    "highlight.js": "^11.12.0",
+    "marked": "^18.1.2",
+    "unpdf": "^1.4.0"
+  },
+  "devDependencies": {
+    "@fontsource-variable/noto-serif-sc": "^5.3.1",
+    "@fontsource-variable/noto-sans-sc": "^5.3.1",
+    "@fontsource-variable/fraunces": "^5.2.0",
+    "@fontsource-variable/source-serif-4": "^5.2.0",
+    "@fontsource-variable/inter": "^5.2.0",
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
+    "@fontsource-variable/playfair-display": "^5.2.0",
+    "lxgw-wenkai-webfont": "^1.7.0"
+  }
+}

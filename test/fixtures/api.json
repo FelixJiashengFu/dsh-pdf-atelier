@@ -1,0 +1,1 @@
+{ "title": "Building a Plugin Host", "subtitle": "Notes on lifecycles, isolation and failure", "kicker": "Engineering notes", "brief": "software architecture plugin system API", "doc_type": "report", "body_path": "api.md" }
